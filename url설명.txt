@@ -1,0 +1,9 @@
+GET: http://localhost:8080/	--> 단순 text설명
+GET: http://localhost:8080/api  --> 환영 메시지
+GET: http://localhost:8080/api/setup	--> 이거 먼저 한번만 실행! DB에 test용 아이디 삽입
+GET: http://localhost:8080/api/users 	--> 모든 회원의 정보 출력
+POST: http://localhost:8080/api/authenticate	--> body 부분 id, password 입력하면 로그인 성공 메시지 뜸
+	여기서 token 내용 쫙 복사하고
+GET: http://localhost:8080/api/users  --> Body말고 Headers에 x-access-token쓰고 , 값: 아까 복사한 토큰값 
+						토큰 전달 성공시 아이디 정보 뜸
+POST: http://localhost:8080/api/register --> Body 부분에 id, password입력

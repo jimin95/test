@@ -1,0 +1,14 @@
+<html ng-app="Genie">
+    <head>
+        <title>GenieGo in HelloAnt$</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script src="controller/controller.js"></script>
+    </head>
+    <body ng-controller="helloants">
+        <h1>내가 올린 이미지</h1>
+        <div ng-repeat="image in imageList">
+        <img ng-src="{{image.filePath}}" width="50" height="50" />
+        <h2>{{image.name}}</h2>
+        </div>
+    </body>
+</html>
